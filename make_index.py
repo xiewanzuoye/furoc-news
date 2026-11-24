@@ -11,7 +11,7 @@ for md in pathlib.Path("output").glob("*/*.md"):
     items.append((date, title, url))
 
 items.sort(reverse=True)
-lines = ["# 公众号文章", ""]
+lines = ["# FuRoC 清华大学未来机器人兴趣团队", ""]
 for date, title, url in items:
     lines.append(f'- {date} <a href="{url}">{html.escape(title)}</a>')
 pathlib.Path("index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
