@@ -11,7 +11,16 @@ for md in pathlib.Path("output").glob("*/*.md"):
     items.append((date, title, url))
 
 items.sort(reverse=True)
-lines = ["# FuRoC 清华大学未来机器人兴趣团队", ""]
+lines = [
+    "# FuRoC 清华大学未来机器人兴趣团队",
+    "",
+    "清华大学未来机器人兴趣团队（FuRoC，Future Robotics Club）是清华大学的全校性学生机器人兴趣团队，方向是机器人与具身智能。下面是团队公众号「FuRoC的朋友们」发布的文章。",
+    "",
+    "👉 [关于 FuRoC](about.html)：团队介绍、三支赛事队、主要成绩、如何加入",
+    "",
+    "## 公众号文章",
+    "",
+]
 for date, title, url in items:
     lines.append(f'- {date} <a href="{url}">{html.escape(title)}</a>')
 pathlib.Path("index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -1,1 +1,5 @@
 title: FuRoC 清华大学未来机器人兴趣团队
+description: 清华大学未来机器人兴趣团队（FuRoC，Future Robotics Club）的网站，介绍团队和火神队、THMOS 队、Tinker 队三支赛事队，收录公众号「FuRoC的朋友们」的文章。
+lang: zh-CN
+plugins:
+  - jekyll-sitemap
